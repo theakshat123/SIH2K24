@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    border: border-box;
+}
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    color: aqua;
+    animation: colorAnimate 2s ease-in 0s infinite ;
+    text-decoration: underline;
+}
+@keyframes colorAnimate {
+  from {
+   
+    color: aqua;
+  }
+  to{
+   
+    color: burlywood;
+  }
+}
+.container{
+    height: 700px;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 40px;
+    color: beige;
+    font-size: 1.45rem;
+    background-image: url("https://www.simplilearn.com/ice9/free_resources_article_thumb/Artificial_Intelligence_Human_Intelligence.jpg");
+    background-size: cover;
+}
+p{
+    text-align: center;
+    color: coral;
+    font-size: 2rem ;
+    text-decoration: underline;
+}
+.developer{
+    margin-top: 50px;
+    text-align: center;
+}
+.box{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    display: inline-block;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.0rem;
+}
+.box1{ 
+    background-color:wheat;
+    text-align: center;
+    color: beige;
+    margin-left: 40px;
+}
+.box2{
+    
+    background-color: #212529;
+    color: beige;margin-left: 40px;
+    
+}
+.box3{
+    background-color:rgb(57, 143, 143);
+    color: beige;
+    margin-left: 40px; 
+}
+.box4{
+    
+    background-color: rgb(12, 44, 12);
+    color: beige;margin-left: 40px; 
+}
+.box5{ 
+    
+    background-color: brown;margin-left: 40px;
+    color: beige;
+}
+.box6{
+    
+    background-color:darkolivegreen ;margin-left: 40px;
+    color: beige;
+}
