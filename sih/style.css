@@ -1,78 +1,334 @@
-*{
+/* General Reset */
+* {
     margin: 0;
-    
-    border: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
-.navbar{
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Default styling for larger screens (desktops) */
+.navbar {
     height: 90px;
+    width: 100%;
     background-color: azure;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.nav-logo{
+
+.nav-logo {
     height: 100px;
-    width: 312px;
-    
+    width: 25%; /* Adjusted width for better responsiveness */
 }
-.logo{
+
+.logo {
     background-image: url("https://cdn01.signfordeaf.com/signfordeaf/logo_en.png");
+    /* object-fit: contain; */
+    background-repeat: no-repeat;
+    /* background-size: cover; */
     height: 70px;
     width: 100%;
     margin-top: 10px;
-} 
-
-.border:hover{
-    border: 0.05px solid grey;
-    
 }
-p{
+.border:hover {
+    color: rgb(204, 35, 35);
+    cursor: pointer;
+}
+
+p {
     color: purple;
     font-size: 1.5rem;
 }
-/* panel 2 */
-.panel2{
- height: 800px;
- width: 1600px;
- background-repeat: no-repeat;
- border: 1px solid gray;
- background-image: url('ai.png');
- color: black;
 
-} h1{
-    margin-left: 750px;
-    font-size: 4rem;
-    color: #222f3d;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+p:hover{
+    color: #ff9800;
+    transition: color 0.3s ease;
 }
-h4{
-    margin-left: 750px;
-    font-size: 2rem;
-    color: rgb(122, 78, 86);
-    font-family: 'Times New Roman', Times, serif;
-}
-footer{
-    margin-top: 20px;
-}
-.foot{
-    background-color: #222f3d;
+
+/* Panel 2 */
+.panel2 {
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover; /* Make background image responsive */
+    border: 1px solid gray;
+    background-image: url('ai.png');
     color: white;
-    height: 300px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 0.5rem;
+    text-align: center;
+    padding: 20px;
 }
-h5{
-    color: white;
-    font-size: 1rem ;
+
+h1 {
+    font-size: 3rem;
+    /* color: #222f3d; */
 }
-h6{
- color: white;
- text-decoration: underline;
- margin-top: 20px;
- font-size: 1.5rem;
+
+h4 {
+    font-size: 1.5rem;
+    /* color: rgb(122, 78, 86); */
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 80%;
+}
+
+/* Panel 3 */
+.panel3 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: white;
+    flex-wrap: wrap; /* Make boxes stack on smaller screens */
+}
+
+.box {
+    border: 2px solid black;
+    /* height: 400px; */
+    width: 28vw;
+    background-color: rgb(120, 12, 12);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 2rem;
+}
+
+h2 {
+    color: black;
+}
+
+ul {
+    text-align: center;
+}
+
+.box1 {
+    background-color: wheat;
+    font-size: 1.3rem;
+}
+
+.box2 {
+    font-size: 1.3rem;
+    background-color: #212529;
+    color: beige;
+}
+
+.box3 {
+    background-color: azure;
+}
+
+/* Footer Styling */
+footer {
+    /* width: 100vw; */
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    /* margin-bottom: 0px; */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    /* flex: 1 1 22%; */
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background-color: #ff5e00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #e94c00;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #bbb;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-logo {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .panel2 {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        max-width: 90%;
+    }
+
+    .panel3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    /* .foot {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .footpanel1 {
+        flex-direction: column;
+    } */
+    .footer-col {
+        flex: 1 1 45%;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 5px 0;
+    }
+
+    .nav-logo {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+
+    .panel3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 95%;
+        margin: 10px 0;
+    }
+
+    /* .foot {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .footpanel1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        font-size: 0.9rem;
+    } */
+}
+@media (max-width: 576px) {
+    .footer-col {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
